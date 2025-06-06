@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body class="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-50 font-display relative min-h-screen flex flex-col">
 
@@ -38,7 +39,7 @@
     <nav class="sticky top-0 w-full z-40 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-lg">
       <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <a href="index.html#hero" class="flex items-center space-x-3">
-          <img src="assets/images/logo.png" alt="Logo MW Partner" class="h-10 w-auto">
+          <img loading="lazy" src="assets/images/logo.png" alt="Logo MW Partner" class="h-10 w-auto">
         </a>
         <div class="hidden lg:flex space-x-1 items-center">
           <a href="index.html#hero" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Strona główna</a>
@@ -155,7 +156,7 @@
             <button id="closeModal" aria-label="Zamknij okno szczegółów oferty" class="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent transition focus:outline-none"><i class="fa fa-times" aria-hidden="true"></i></button>
             <div class="mb-4">
                 <div class="relative group">
-                    <img id="modalMainImage" src="https://placehold.co/800x600/cccccc/333333?text=Nieruchomość&font=montserrat" alt="Główne zdjęcie nieruchomości" class="rounded-lg w-full h-64 md:h-80 object-cover shadow-md transition-opacity duration-300 ease-in-out">
+                    <img loading="lazy" id="modalMainImage" src="https://placehold.co/800x600/cccccc/333333?text=Nieruchomość&font=montserrat" alt="Główne zdjęcie nieruchomości" class="rounded-lg w-full h-64 md:h-80 object-cover shadow-md transition-opacity duration-300 ease-in-out">
                     <button id="modalGalleryPrev" aria-label="Poprzednie zdjęcie w galerii" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 focus:outline-none z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </button>
@@ -276,9 +277,9 @@
       <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="assets/js/api.js"></script>
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/chatbot.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/api.js"></script>
+    <script defer src="assets/js/modal.js"></script>
+    <script defer src="assets/js/chatbot.js"></script>
+    <script defer src="assets/js/main.js"></script>
 </body>
 </html>

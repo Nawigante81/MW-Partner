@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com/3.3.5?plugins=typography"></script>
 </head>
 <body class="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-50 font-display relative min-h-screen flex flex-col">
@@ -38,7 +39,7 @@
     <nav class="sticky top-0 w-full z-40 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-lg">
       <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <a href="index.html#hero" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-primary rounded">
-          <img src="assets/images/logo.png" alt="Logo MW Partner" class="h-10 w-auto">
+          <img loading="lazy" src="assets/images/logo.png" alt="Logo MW Partner" class="h-10 w-auto">
           <!-- <span class="text-xl font-bold tracking-wide text-gray-800 dark:text-gray-100 hidden sm:inline">MW Partner</span> -->
         </a>
         <div class="hidden lg:flex space-x-1 items-center">
@@ -84,7 +85,7 @@
                     <p class="text-gray-500 dark:text-gray-400 text-sm">Opublikowano: 15 Maja 2025  <span class="mx-1">|</span> Kategoria: <span class="text-accent font-medium">Poradniki dla Kupujących</span></p>
                 </header>
 
-                <img src="assets/images/demo (7).jpg" onerror="this.src='https://placehold.co/800x450/3b82f6/white?text=Bezpieczny+Zakup+Mieszkania&font=montserrat'" alt="Ilustracja do artykułu o bezpiecznym zakupie mieszkania" class="w-full h-auto md:h-[450px] object-cover rounded-lg mb-8 shadow-md">
+                <img loading="lazy" src="assets/images/demo (7).jpg" onerror="this.src='https://placehold.co/800x450/3b82f6/white?text=Bezpieczny+Zakup+Mieszkania&font=montserrat'" alt="Ilustracja do artykułu o bezpiecznym zakupie mieszkania" class="w-full h-auto md:h-[450px] object-cover rounded-lg mb-8 shadow-md">
 
                 <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 text-base leading-relaxed">
                     <p class="lead text-lg mb-6 font-medium">Kupno pierwszego mieszkania to jedna z najważniejszych decyzji w życiu. Aby proces przebiegł płynnie i bez stresu, przygotowaliśmy szczegółowy poradnik, który pomoże Ci przejść przez każdy etap – od planowania finansowego po finalizację zakupu. Zoptymalizowany pod kątem bezpieczeństwa i unikania pułapek, ten przewodnik jest idealny dla początkujących nabywców. Przeczytaj, jak krok po kroku zrealizować marzenie o własnym M!</p>
@@ -308,8 +309,8 @@
       <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="assets/js/api.js"></script>
-    <script src="assets/js/chatbot.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/api.js"></script>
+    <script defer src="assets/js/chatbot.js"></script>
+    <script defer src="assets/js/main.js"></script>
 </body>
 </html>
