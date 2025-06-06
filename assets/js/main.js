@@ -2,6 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("DOM załadowany, start skryptu main.js");
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('Service Worker zarejestrowany'))
+            .catch(err => console.error('Błąd rejestracji Service Worker:', err));
+    }
 
     let allFetchedProperties = [];
     if (typeof loadAndStoreProperties === 'function') {
