@@ -1,0 +1,56 @@
+[
+  {
+    "image": "assets/images/artykul-poradnik.jpg",
+    "placeholderImage": "https://placehold.co/600x400/3b82f6/white?text=Poradnik+Kupującego&font=montserrat",
+    "category": "Poradniki dla Kupujących",
+    "title": "Jak bezpiecznie kupić pierwsze mieszkanie? Kompletny przewodnik.",
+    "excerpt": "Marzysz o własnym M? Nasz przewodnik krok po kroku pomoże Ci zrealizować to marzenie bez stresu i z pełnym poczuciem bezpieczeństwa.",
+    "date": "15 Maja 2025",
+    "link": "poradnik-kupno-mieszkania.html"
+  },
+  {
+    "image": "https://moderntown.pl/wp-content/uploads/2025/01/Zdjecie-WhatsApp-2025-01-31-o-10.02.59_66fdc524.jpg",
+    "placeholderImage": "https://placehold.co/600x400/06d6a0/1f2937?text=Trendy+Rynkowe&font=montserrat",
+    "category": "Analizy Rynku",
+    "title": "Trendy 2025: Co kształtuje rynek nieruchomości?",
+    "excerpt": "Odkryj, jakie lokalizacje zyskują na wartości i w co warto inwestować. Analiza ekspertów MW Partner pomoże Ci podjąć najlepsze decyzje.",
+    "date": "10 Maja 2025",
+    "link": "artykul-trendy-2025.html"
+  },
+  {
+    "image": "assets/images/artykul-home-staging.jpg",
+    "placeholderImage": "https://placehold.co/600x400/8b5cf6/white?text=Home+Staging&font=montserrat",
+    "category": "Porady dla Sprzedających",
+    "title": "Home staging: Jak przygotować nieruchomość do sprzedaży?",
+    "excerpt": "Odkryj moc pierwszego wrażenia! Proste triki i profesjonalne porady, dzięki którym Twoja nieruchomość sprzeda się szybciej i za lepszą cenę.",
+    "date": "5 Maja 2025",
+    "link": "#"
+  },
+  {
+    "image": "assets/images/artykul-ogrod.jpg",
+    "placeholderImage": "https://placehold.co/600x400/22c55e/white?text=Architektura+Zieleni&font=montserrat",
+    "category": "Inspiracje Ogrodowe",
+    "title": "Twój wymarzony ogród: Od projektu do realizacji.",
+    "excerpt": "Stwórz swoją zieloną oazę spokoju. Porady dotyczące projektowania, wyboru roślin i pielęgnacji ogrodu marzeń.",
+    "date": "28 Kwietnia 2025",
+    "link": "#"
+  },
+  {
+    "image": "assets/images/artykul-prognozy.jpg",
+    "placeholderImage": "https://placehold.co/600x400/f97316/white?text=Prognozy+Rynkowe&font=montserrat",
+    "category": "Analizy Ekspertów",
+    "title": "Ceny nieruchomości: Co przyniesie druga połowa roku?",
+    "excerpt": "Analizujemy kluczowe czynniki wpływające na rynek i prognozujemy zmiany cen mieszkań oraz domów w nadchodzących miesiącach.",
+    "date": "22 Kwietnia 2025",
+    "link": "#"
+  },
+  {
+    "image": "assets/images/artykul-kredyt.jpg",
+    "placeholderImage": "https://placehold.co/600x400/ef4444/white?text=Pomoc+Kredytowa&font=montserrat",
+    "category": "Finansowanie Marzeń",
+    "title": "Kredyt hipoteczny bez tajemnic: Jak wybrać najlepszą ofertę?",
+    "excerpt": "Nasi doradcy kredytowi przeprowadzą Cię przez zawiłości formalności i pomogą znaleźć finansowanie dopasowane do Twoich potrzeb.",
+    "date": "18 Kwietnia 2025",
+    "link": "#"
+  }
+]

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MW Partner - Nieruchomości, Dom, Inwestycje | Twoje Marzenia, Nasza Pasja</title>
+    <meta name="description" content="MW Partner - Twoje zaufane biuro nieruchomości. Znajdź wymarzony dom, mieszkanie lub idealną inwestycję. Profesjonalne doradztwo, szeroka oferta, bezpieczeństwo transakcji. Dom to nie miejsce – to uczucie.">
+    <meta name="keywords" content="nieruchomości, mieszkania, domy, inwestycje, sprzedaż nieruchomości, kupno nieruchomości, MW Partner, biuro nieruchomości, doradztwo nieruchomościowe, rynek nieruchomości">
+    <meta name="author" content="Tomasz Pytlak">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[https://mw-partner.org]">
+    <meta property="og:title" content="MW Partner - Nieruchomości, Dom, Inwestycje | Twoje Marzenia, Nasza Pasja">
+    <meta property="og:description" content="MW Partner - Twoje zaufane biuro nieruchomości. Znajdź wymarzony dom, mieszkanie lub idealną inwestycję.">
+    <meta property="og:image" content="[https://chatgpt.com/s/m_6830be2c8c8c81918eac4449f2d2bfa1]">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="[https://mw-partner.org]">
+    <meta property="twitter:title" content="MW Partner - Nieruchomości, Dom, Inwestycje | Twoje Marzenia, Nasza Pasja">
+    <meta property="twitter:description" content="MW Partner - Twoje zaufane biuro nieruchomości. Znajdź wymarzony dom, mieszkanie lub idealną inwestycję.">
+    <meta property="twitter:image" content="[https://chatgpt.com/s/m_6830be2c8c8c81918eac4449f2d2bfa1]">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {extend: {
+          fontFamily: {display: ["Montserrat", "sans-serif"]},
+          colors: {
+            primary: {DEFAULT: '#3b82f6'},
+            accent: {DEFAULT: '#06d6a0'},
+            warmwood: '#A0522D',
+            naturalgreen: '#228B22'
+          },
+          boxShadow: {glow: '0 0 12px 2px #3b82f688', neon: '0 0 24px 2px #06d6a0aa'}
+        }}
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <style>
+        .hero-slider .slide { display: none; background-size: cover; background-position: center; min-height: 100vh; }
+        .hero-slider .slide.active { display: flex; }
+        .slide-overlay { background-color: rgba(0, 0, 0, 0.4); }
+        .dark .slide-overlay { background-color: rgba(0, 0, 0, 0.55); }
+        .slider-nav-button { transition: background-color 0.3s ease, transform 0.2s ease; }
+        .slider-nav-button:hover { background-color: rgba(255, 255, 255, 0.3); transform: scale(1.1); }
+        .dark .slider-nav-button:hover { background-color: rgba(0, 0, 0, 0.4); }
+        .slider-dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+        .slider-dot { width: 12px; height: 12px; background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; cursor: pointer; transition: background-color 0.3s ease; }
+        .slider-dot.active { background-color: white; }
+        .dark .slider-dot { background-color: rgba(255, 255, 255, 0.3); }
+        .dark .slider-dot.active { background-color: #06d6a0; }
+        .testimonial-card { min-height: 280px; }
+        body:not(.dark) { background-color: #f8f9fa; color: #212529; }
+        body:not(.dark) .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
+        body:not(.dark) nav.sticky { background-color: rgba(255, 255, 255, 0.9); border-bottom-color: #e9ecef; }
+        body:not(.dark) .text-primary { color: #3b82f6; }
+        body:not(.dark) .text-accent { color: #06d6a0; }
+        body:not(.dark) .hover\:text-primary:hover { color: #2563eb; }
+        body:not(.dark) .hover\:text-accent:hover { color: #059669; }
+        .dark body { color: #f8f9fa; }
+        .dark .glass { background: rgba(26, 32, 44, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); }
+        .dark nav.sticky { background-color: rgba(17, 24, 39, 0.9); border-bottom-color: #374151; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-50 font-display relative min-h-screen flex flex-col">
+
+    <div class="fixed top-4 right-4 z-50">
+      <button id="toggleDark" title="Przełącz tryb ciemny/jasny" aria-label="Przełącz tryb wyświetlania między jasnym a ciemnym" class="p-3 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-lg rounded-full shadow-md border border-gray-300 dark:border-gray-700 hover:scale-105 transition duration-200 focus:outline-none focus:ring-2 focus:ring-primary">
+        <i class="fa-solid fa-moon hidden dark:inline" aria-hidden="true"></i><i class="fa-solid fa-sun inline dark:hidden" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <nav class="sticky top-0 w-full z-40 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-lg">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <a href="index.html#hero" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-primary rounded">
+          <img src="assets/images/logo.png" alt="Logo MW Partner" class="h-10 w-auto">
+          <!-- <span class="text-xl font-bold tracking-wide text-gray-800 dark:text-gray-100 hidden sm:inline">MW Partner</span> -->
+        </a>
+        <div class="hidden lg:flex space-x-1 items-center">
+          <a href="#hero" class="nav-link px-3 py-2 font-medium text-primary dark:text-primary transition-all relative">Strona główna</a>
+          <a href="oferty.html" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Oferty</a>
+          <a href="aktualnosci.html" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Aktualności</a>
+          <a href="kalkulator-kredytowy.html" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Kalkulator Kredytowy</a>
+          <a href="#opinie" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Opinie</a>
+          <a href="#kontakt" class="nav-link px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all relative">Kontakt</a>
+          <div class="relative group">
+            <button class="px-3 py-2 font-medium text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-all relative flex items-center">Więcej <i class="fa fa-angle-down ml-1 transform group-hover:rotate-180 transition-transform duration-200"></i></button>
+            <div class="absolute left-1/2 -translate-x-1/2 mt-3 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 origin-top min-w-max p-2 flex flex-col space-y-1 z-10 border border-gray-200 dark:border-gray-700">
+              <a href="#newsletter" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/80 rounded transition-colors">Newsletter</a>
+              <a href="#" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/80 rounded transition-colors">Kariera</a>
+            </div>
+          </div>
+        </div>
+        <button id="menuBtn" aria-label="Otwórz menu mobilne" class="lg:hidden flex items-center text-2xl px-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="fixed top-0 left-0 w-72 max-w-[calc(100%-4rem)] h-full bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 z-50 shadow-2xl p-8 pt-20 transition-transform duration-300 ease-in-out -translate-x-full lg:hidden flex flex-col space-y-6 border-r border-gray-200 dark:border-gray-800">
+        <button id="closeMenu" aria-label="Zamknij menu mobilne" class="absolute top-6 right-6 text-2xl text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <a href="#hero" class="mobile-nav-link text-lg font-bold text-primary dark:text-primary">Strona główna</a>
+        <a href="oferty.html" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Oferty</a>
+        <a href="aktualnosci.html" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Aktualności</a>
+        <a href="kalkulator-kredytowy.html" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Kalkulator Kredytowy</a>
+        <a href="#opinie" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Opinie</a>
+        <a href="#kontakt" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Kontakt</a>
+        <a href="#newsletter" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Newsletter</a>
+        <a href="#" class="mobile-nav-link text-lg font-bold hover:text-primary dark:hover:text-primary">Kariera</a>
+      </div>
+    </nav>
+
+    <main class="flex-grow">
+        <section id="hero" class="hero-slider relative overflow-hidden">
+            <div class="slide active flex items-center justify-center text-center text-white" style="background-image: url('assets/images/glowna1.png');">
+                <div class="slide-overlay absolute inset-0"></div>
+                <div class="relative z-10 p-8 max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">Twój Dom, Twoje <span class="text-accent">Bezpieczne Miejsce</span></h1>
+                    <p class="text-xl md:text-2xl mb-10 opacity-95">Odkryj z nami przestrzeń, gdzie rodzą się wspomnienia i spełniają marzenia.</p>
+                    <a href="oferty.html" class="btn-wave relative px-8 py-3 bg-primary text-white font-bold rounded-md shadow-md hover:bg-blue-600 dark:hover:bg-blue-500 hover:scale-105 hover:shadow-glow transition text-lg">Znajdź Swój Kąt</a>
+                </div>
+            </div>
+            <div class="slide flex items-center justify-center text-center text-white" style="background-image: url('assets/images/hero-2.jpg');">
+                <div class="slide-overlay absolute inset-0"></div>
+                <div class="relative z-10 p-8 max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">Inwestycja w <span class="text-primary">Szczęśliwą Przyszłość</span></h1>
+                    <p class="text-xl md:text-2xl mb-10 opacity-95">Z nami znajdziesz nie tylko nieruchomość, ale fundament dla Twoich planów.</p>
+                    <a href="#kontakt" class="btn-wave relative px-8 py-3 bg-accent text-gray-900 font-bold rounded-md shadow-md hover:bg-green-400 dark:hover:bg-green-500 hover:scale-105 hover:shadow-glow transition text-lg">Porozmawiajmy o Inwestycji</a>
+                </div>
+            </div>
+            <div class="slide flex items-center justify-center text-center text-white" style="background-image: url('assets/images/hero-3.jpg');">
+                <div class="slide-overlay absolute inset-0"></div>
+                <div class="relative z-10 p-8 max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">Ciepło Domowego <span class="text-accent">Ogniska z MW Partner</span></h1>
+                    <p class="text-xl md:text-2xl mb-10 opacity-95">Jesteśmy tu, by pomóc Ci znaleźć miejsce, które nazwiesz domem.</p>
+                    <button id="openChatbotFromHero" class="btn-wave relative px-8 py-3 bg-primary text-white font-bold rounded-md shadow-md hover:bg-blue-600 dark:hover:bg-blue-500 hover:scale-105 hover:shadow-glow transition text-lg">Zapytaj Doradcę</button>
+                </div>
+            </div>
+            <button id="prevSlide" class="slider-nav-button absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full focus:outline-none z-20">
+                <i class="fas fa-chevron-left fa-lg"></i>
+            </button>
+            <button id="nextSlide" class="slider-nav-button absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full focus:outline-none z-20">
+                <i class="fas fa-chevron-right fa-lg"></i>
+            </button>
+            <div id="sliderDots" class="slider-dots z-20"></div>
+        </section>
+
+        <section id="oferta-tygodnia" class="py-16 bg-gray-50 dark:bg-gray-900 fade-in">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">Oferta Tygodnia: Poczuj Magię Tego Miejsca!</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-10">Wyjątkowa nieruchomość, która czeka, by stać się Twoim nowym początkiem.</p>
+                <div class="property-card max-w-lg mx-auto bg-white dark:bg-gray-800/80 dark:glass p-0 rounded-2xl shadow-xl hover:shadow-neon overflow-hidden relative group flex flex-col" data-property-index="0">
+                    <div class="relative">
+                      <img src="https://atriumduo.pl/wp-content/uploads/2023/04/17Dom-na-sprzedaz-z-lokalem-uzytkowym-Redziny-kolo-Czestochowy-3-scaled.jpg" onerror="this.src='https://placehold.co/600x400/cccccc/333333?text=Brak+obrazu'" class="w-full h-64 object-cover group-hover:blur-[2px] transition duration-200" alt="Oferta Tygodnia - Apartament z widokiem">
+                      <div class="absolute top-4 left-4 bg-accent text-white px-4 py-1 rounded-full text-sm font-bold shadow">Oferta Tygodnia!</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                      <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Apartament z widokiem zapierającym dech</h3>
+                      <p class="text-gray-600 dark:text-gray-300 mb-2 property-location">Warszawa, Centrum – Twoje okno na świat</p>
+                      <div class="flex justify-around text-sm text-gray-500 dark:text-gray-400 my-4">
+                        <span><i class="fa fa-bed mr-1 text-primary dark:text-accent"></i> 3 przytulne sypialnie</span>
+                        <span><i class="fa fa-bath mr-1 text-primary dark:text-accent"></i> 2 eleganckie łazienki</span>
+                        <span><i class="fa fa-ruler-combined mr-1 text-primary dark:text-accent"></i> 98 m² przestrzeni</span>
+                      </div>
+                      <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-grow">Wyobraź sobie poranki z kawą i zachwycającym widokiem na panoramę miasta. Ten luksusowy apartament to definicja komfortu i prestiżu...</p>
+                      <div class="mt-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <span class="text-3xl font-black text-accent">2 200 000 zł</span>
+                        <button class="property-details-btn relative btn-wave w-full sm:w-auto bg-primary text-white px-6 py-3 rounded-lg shadow hover:scale-105 hover:bg-blue-600 dark:hover:bg-blue-500 font-semibold">Odkryj Szczegóły</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="opinie" class="py-20 bg-gray-100 dark:bg-gray-900 fade-in">
+          <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-gray-100">Nasi Klienci, Nasze Historie Sukcesu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" onerror="this.src='https://placehold.co/56x56/3b82f6/white?text=A'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Anna Kowalska">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Anna Kowalska</h4>
+                            <p class="text-primary dark:text-accent text-sm">Kupująca mieszkanie</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Dzięki MW Partner spełniłam marzenie o własnym M! Cały proces był transparentny, a zespół niezwykle pomocny i profesjonalny. Poczucie bezpieczeństwa na każdym kroku."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" onerror="this.src='https://placehold.co/56x56/06d6a0/white?text=J'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Jan Nowak">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Jan Nowak</h4>
+                            <p class="text-primary dark:text-accent text-sm">Sprzedający dom</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Sprzedaż domu z MW Partner to była czysta przyjemność. Szybko, sprawnie i za cenę, która mnie satysfakcjonowała. Czułem, że jestem w dobrych rękach."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" onerror="this.src='https://placehold.co/56x56/06d6a0/white?text=K'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Katarzyna Wiśniewska">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Katarzyna Wiśniewska</h4>
+                            <p class="text-primary dark:text-accent text-sm">Inwestorka</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Jako inwestorka cenię sobie profesjonalizm i dostęp do najlepszych ofert. MW Partner zawsze staje na wysokości zadania. To partner godny zaufania."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" onerror="this.src='https://placehold.co/56x56/3b82f6/white?text=P'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Piotr Zając">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Piotr Zając</h4>
+                            <p class="text-primary dark:text-accent text-sm">Wynajmujący mieszkanie</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Dzięki MW Partner szybko znalazłem najemców do mojego mieszkania. Cały proces przebiegł sprawnie i bezproblemowo. Świetna komunikacja!"</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/23.jpg" onerror="this.src='https://placehold.co/56x56/06d6a0/white?text=M'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Magdalena Lewandowska">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Magdalena Lewandowska</h4>
+                            <p class="text-primary dark:text-accent text-sm">Kupująca dom</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Zespół MW Partner wykazał się ogromną cierpliwością i zrozumieniem moich potrzeb. Pomogli mi znaleźć idealny dom dla mojej rodziny. Dziękuję!"</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" onerror="this.src='https://placehold.co/56x56/3b82f6/white?text=T'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Tomasz Kaczmarek">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Tomasz Kaczmarek</h4>
+                            <p class="text-primary dark:text-accent text-sm">Sprzedający działkę</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Sprzedaż działki okazała się prostsza niż myślałem, a to wszystko dzięki profesjonalnemu podejściu i znajomości rynku przez zespół MW Partner."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+                 <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/11.jpg" onerror="this.src='https://placehold.co/56x56/06d6a0/white?text=E'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Ewa Michalska">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Ewa Michalska</h4>
+                            <p class="text-primary dark:text-accent text-sm">Kupująca apartament</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Zakup apartamentu był dla mnie ważnym krokiem. Cieszę się, że mogłam liczyć na wsparcie i fachowe doradztwo MW Partner na każdym etapie."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" onerror="this.src='https://placehold.co/56x56/3b82f6/white?text=K'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Krzysztof Baran">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Krzysztof Baran</h4>
+                            <p class="text-primary dark:text-accent text-sm">Inwestor długoterminowy</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Z MW Partner współpracuję od wielu lat. Ich rzetelność, znajomość rynku i indywidualne podejście do klienta to gwarancja udanych inwestycji."</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white dark:bg-gray-800/80 dark:glass p-6 rounded-2xl shadow-lg flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/88.jpg" onerror="this.src='https://placehold.co/56x56/06d6a0/white?text=S'" class="w-14 h-14 rounded-full mr-4 border-4 border-primary dark:border-accent shadow-glow" alt="Sylwia Wójcik">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Sylwia Wójcik</h4>
+                            <p class="text-primary dark:text-accent text-sm">Pierwszy zakup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">"Kupno pierwszego mieszkania to duże emocje. Doradcy z MW Partner nie tylko pomogli mi znaleźć idealne lokum, ale też rozwiali wszelkie wątpliwości. Dziękuję za cierpliwość!"</p>
+                    <div class="text-yellow-400 text-lg flex gap-1 mt-auto">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kontakt" class="py-20 bg-gray-100 dark:bg-gray-900 fade-in">
+          <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-white">Skontaktuj się z Nami</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto">Masz pytania? Chcesz dowiedzieć się więcej o naszych ofertach lub potrzebujesz doradztwa? Jesteśmy tu dla Ciebie.</p>
+            <form id="contactForm" action="https://formspree.io/f/xanozkkk" method="POST" class="bg-white dark:bg-gray-800/80 dark:glass p-8 rounded-2xl shadow-xl flex flex-col gap-6 max-w-xl mx-auto">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <input name="name" type="text" required placeholder="Imię i nazwisko" class="p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600" />
+                <input name="email" type="email" required placeholder="Adres email" class="p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600" />
+              </div>
+              <input name="phone" type="tel" placeholder="Numer telefonu (opcjonalnie)" class="p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600" />
+              <textarea name="message" required placeholder="Twoja wiadomość..." rows="4" class="p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600"></textarea> <button type="submit" class="relative btn-wave bg-primary text-white px-7 py-3 rounded-md shadow-lg font-bold hover:bg-blue-600 dark:hover:bg-blue-500 hover:scale-105 transition">Wyślij wiadomość <i class="fa fa-paper-plane ml-2"></i></button>
+              <div id="formStatus" class="text-center font-bold hidden mt-2"></div>
+            </form>
+          </div>
+        </section>
+
+        <section id="newsletter" class="py-16 bg-gray-50 dark:bg-gray-950 fade-in">
+          <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Dołącz do Naszego Newslettera</h2>
+            <p class="mb-6 text-gray-600 dark:text-gray-300">Otrzymuj inspiracje, porady i najświeższe informacje o wyjątkowych ofertach prosto na Twój email.</p>
+            <form id="newsletterForm" action="https://formspree.io/f/mqaqojjo" method="POST" class="bg-white dark:bg-gray-800/80 dark:glass p-4 rounded-xl flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
+              <input name="email" type="email" required placeholder="Twój adres email" class="flex-1 p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600" />
+              <button type="submit" class="relative btn-wave bg-accent text-gray-900 px-7 py-3 rounded-md shadow-lg font-bold hover:bg-green-500 dark:hover:bg-green-400 hover:scale-105 transition">Zapisz się i Odkrywaj</button>
+            </form>
+            <div id="newsletterStatus" class="font-bold hidden mt-4"></div>
+          </div>
+        </section>
+
+        <div id="propertyModal" class="modal inactive fixed inset-0 z-50 bg-black/70 dark:bg-black/80 flex items-center justify-center transition-all px-4 py-8 overflow-y-auto">
+          <div class="bg-white dark:bg-gray-800 dark:glass rounded-xl max-w-lg w-full p-6 md:p-8 relative scale-in shadow-2xl my-auto">
+            <button id="closeModal" aria-label="Zamknij okno szczegółów oferty" class="absolute top-4 right-4 text-2xl text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent transition focus:outline-none"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="mb-4">
+                <div class="relative group">
+                    <img id="modalMainImage" src="https://placehold.co/800x600/cccccc/333333?text=Nieruchomość&font=montserrat" alt="Główne zdjęcie nieruchomości" class="rounded-lg w-full h-64 md:h-80 object-cover shadow-md transition-opacity duration-300 ease-in-out">
+                    <button id="modalGalleryPrev" aria-label="Poprzednie zdjęcie w galerii" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 focus:outline-none z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button id="modalGalleryNext" aria-label="Następne zdjęcie w galerii" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 focus:outline-none z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="modalThumbnails" class="flex space-x-2 overflow-x-auto p-2 mt-3 -mx-1">
+                </div>
+            </div>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Tytuł nieruchomości</h3>
+            <p id="modalLocation" class="text-sm text-gray-500 dark:text-gray-400 mb-1"></p>
+            <p id="modalDescOriginal" class="text-gray-600 dark:text-gray-300 mb-4">Opis nieruchomości...</p>
+            <div class="my-4">
+                <button id="enhanceDescriptionBtn" class="w-full text-sm btn-wave bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow font-semibold transition flex items-center justify-center">
+                    <i class="fas fa-magic mr-2"></i> Ulepsz opis ✨
+                </button>
+                <div id="enhancedDescriptionOutput" class="gemini-output hidden">
+                    <p id="enhancedDescriptionLoader" class="loading-indicator hidden">Ładowanie ulepszonego opisu...</p>
+                    <div id="enhancedDescriptionText"></div>
+                </div>
+            </div>
+            <div class="my-4">
+                <button id="neighborhoodInsightsBtn" class="w-full text-sm btn-wave bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md shadow font-semibold transition flex items-center justify-center">
+                    <i class="fas fa-map-signs mr-2"></i> Co ciekawego w okolicy? ✨
+                </button>
+                <div id="neighborhoodInsightsOutput" class="gemini-output hidden">
+                    <p id="neighborhoodInsightsLoader" class="loading-indicator hidden">Ładowanie informacji o okolicy...</p>
+                    <div id="neighborhoodInsightsText"></div>
+                </div>
+            </div>
+            <div class="my-4">
+                <button id="interiorDesignBtn" class="w-full text-sm btn-wave bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md shadow font-semibold transition flex items-center justify-center">
+                    <i class="fas fa-lightbulb mr-2"></i> Zainspiruj mnie aranżacją ✨
+                </button>
+                <div id="interiorDesignOutput" class="gemini-output hidden mt-3">
+                    <p id="interiorDesignLoader" class="loading-indicator hidden">Generowanie pomysłów na aranżację...</p>
+                    <div id="interiorDesignText" class="text-sm"></div>
+                </div>
+            </div>
+            <div class="my-4">
+                <button id="investmentAnalysisBtn" class="w-full text-sm btn-wave bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md shadow font-semibold transition flex items-center justify-center">
+                    <i class="fas fa-chart-line mr-2"></i> Analizuj Potencjał Inwestycyjny ✨
+                </button>
+                <div id="investmentAnalysisOutput" class="gemini-output hidden mt-3">
+                    <p id="investmentAnalysisLoader" class="loading-indicator hidden">Analizowanie potencjału inwestycyjnego...</p>
+                    <div id="investmentAnalysisText" class="text-sm"></div>
+                </div>
+            </div>
+            <ul id="modalDetails" class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5 text-gray-700 dark:text-gray-200"></ul>
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
+              <span id="modalPrice" class="text-3xl font-black text-accent">Cena</span>
+              <button class="relative btn-wave w-full sm:w-auto bg-accent text-gray-900 px-6 py-3 rounded-lg shadow hover:scale-105 font-bold hover:bg-green-400 dark:hover:bg-green-500 transition">Umów się na oględziny</button>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 dark:bg-gray-950 text-gray-700 dark:text-gray-200 pt-16 pb-8 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">MW Partner</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs">Profesjonalizm i doświadczenie od 2008 roku. Znajdziemy dla Ciebie idealną nieruchomość.</p>
+           <p class="text-sm text-gray-500 dark:text-gray-400 mt-4"><em>„Dom to nie miejsce – to uczucie.”</em></p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800 dark:text-white">Szybkie linki</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#hero" class="hover:text-primary dark:hover:text-accent transition-all">Strona główna</a></li>
+            <li><a href="oferty.html" class="hover:text-primary dark:hover:text-accent transition-all">Oferty</a></li>
+            <li><a href="aktualnosci.html" class="hover:text-primary dark:hover:text-accent transition-all">Aktualności</a></li>
+            <li><a href="#opinie" class="hover:text-primary dark:hover:text-accent transition-all">Opinie</a></li>
+            <li><a href="#kontakt" class="hover:text-primary dark:hover:text-accent transition-all">Kontakt</a></li>
+             <li><a href="#" class="hover:text-primary dark:hover:text-accent transition-all">Polityka prywatności</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800 dark:text-white">Kontakt</h4>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li><i class="fa fa-map-marker-alt mr-2 text-primary dark:text-accent"></i> ul. Nieruchomości 123</li>
+            <li>00-001 Warszawa</li>
+            <li><i class="fa fa-phone mr-2 text-primary dark:text-accent"></i> <a href="tel:+48123456789" class="hover:underline">+48 123 456 789</a></li>
+            <li><i class="fa fa-envelope mr-2 text-primary dark:text-accent"></i> <a href="mailto:kontakt@mwpartner.pl" class="hover:underline">kontakt@mwpartner.pl</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-start">
+            <h4 class="text-lg font-semibold mb-3 text-gray-800 dark:text-white">Znajdź nas</h4>
+            <div class="flex gap-4">
+                <a href="#" aria-label="Facebook" class="icon-glow text-accent text-2xl hover:text-primary dark:hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram" class="icon-glow text-accent text-2xl hover:text-primary dark:hover:text-primary"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn" class="icon-glow text-accent text-2xl hover:text-primary dark:hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter" class="icon-glow text-accent text-2xl hover:text-primary dark:hover:text-primary"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+      </div>
+      <div class="text-center text-gray-500 dark:text-gray-500 text-sm mt-12 border-t border-gray-300 dark:border-gray-700 pt-6">
+        © <span id="currentYear"></span> MW Partner. Wszelkie prawa zastrzeżone. Strona stworzona z <i class="fa fa-heart text-red-500"></i>.
+      </div>
+    </footer>
+
+    <button id="chatbotToggleButton" title="Wirtualny Doradca" aria-label="Otwórz chat z Wirtualnym Doradcą" class="fixed bottom-7 left-7 p-3 bg-accent text-gray-900 text-xl rounded-full shadow-lg hover:scale-110 hover:bg-green-400 z-40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-800 focus:ring-accent transition">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+    </button>
+
+    <div id="chatbotContainer" data-active="false" class="fixed bottom-24 left-7 w-80 sm:w-96 max-h-[calc(100vh-8rem)] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col transition-all duration-300 ease-in-out z-30">
+        <div id="chatbotHeader" class="flex items-center justify-between p-3 border-b border-gray-200 dark:border-gray-700">
+            <h3 class="font-bold text-gray-800 dark:text-white flex items-center"><i class="fas fa-robot mr-2 text-accent"></i> Wirtualny Doradca</h3>
+            <button id="closeChatbotButton" title="Zamknij czat" aria-label="Zamknij czat" class="text-gray-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-400 text-xl">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="chatbotMessages" class="flex-grow p-3 space-y-3 overflow-y-auto h-64 sm:h-80"></div>
+        <div id="chatbotInputContainer" class="p-3 border-t border-gray-200 dark:border-gray-700 flex items-center gap-2">
+            <input type="text" id="chatbotInput" placeholder="Napisz wiadomość..." class="flex-1 p-2 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent border border-gray-300 dark:border-gray-600 text-sm">
+            <button id="chatbotSendButton" title="Wyślij" aria-label="Wyślij wiadomość" class="p-2 bg-accent text-gray-900 rounded-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-accent">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <button id="topBtn" title="Wróć na górę" aria-label="Przewiń na górę strony" class="fixed bottom-7 right-7 p-3 bg-primary text-white text-xl rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:scale-110 hover:bg-blue-600 dark:hover:bg-blue-500 z-40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

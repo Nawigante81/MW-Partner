@@ -1,0 +1,101 @@
+[
+  {
+    "img": "https://atriumduo.pl/wp-content/uploads/2023/04/17Dom-na-sprzedaz-z-lokalem-uzytkowym-Redziny-kolo-Czestochowy-3-scaled.jpg",
+    "title": "Apartament z widokiem marzeń",
+    "location": "Warszawa, Centrum",
+    "type": "Apartament",
+    "area_sqm": 98,
+    "rooms": 3,
+    "yearBuilt": 2022,
+    "price": 2200000,
+    "dateAdded": "2025-05-20",
+    "desc": "Luksusowy apartament w centrum Warszawy z niesamowitym widokiem na panoramę miasta. Posiada przestronny salon, nowoczesną kuchnię oraz dwie eleganckie łazienki. Idealny dla wymagających klientów ceniących komfort i prestiż.",
+    "det": ["3 przytulne sypialnie", "2 eleganckie łazienki", "98 m² przestrzeni", "Taras widokowy", "Garaż podziemny"],
+    "badge": "Nowość",
+    "badge_color": "primary",
+    "galleryImages": [
+      "https://atriumduo.pl/wp-content/uploads/2023/04/17Dom-na-sprzedaz-z-lokalem-uzytkowym-Redziny-kolo-Czestochowy-3-scaled.jpg",
+      "https://placehold.co/800x600/3b82f6/f0f0f0?text=Salon&font=montserrat",
+      "https://placehold.co/800x600/3b82f6/e0e0e0?text=Kuchnia&font=montserrat",
+      "https://placehold.co/800x600/3b82f6/d0d0d0?text=Sypialnia&font=montserrat"
+    ]
+  },
+  {
+    "img": "https://th.bing.com/th/id/OIP.qV1Yrn2jtatMZ-cZw_YGqAHaE8?cb=iwp2&rs=1&pid=ImgDetMain",
+    "title": "Dom z ogrodem pełnym słońca",
+    "location": "Kraków, Podgórze",
+    "type": "Dom jednorodzinny",
+    "area_sqm": 150,
+    "rooms": 5,
+    "yearBuilt": 2018,
+    "price": 1800000,
+    "dateAdded": "2025-05-15",
+    "desc": "Przestronny dom jednorodzinny z pięknym ogrodem, położony w cichej i spokojnej okolicy na obrzeżach Krakowa. Idealny dla rodziny z dziećmi. Dużo zieleni, bliskość natury.",
+    "det": ["5 przestronnych sypialni", "3 nowoczesne łazienki", "150 m² komfortu", "Duży, słoneczny ogród", "Kominek tworzący atmosferę"],
+    "badge": "Promocja",
+    "badge_color": "accent",
+    "galleryImages": [
+      "https://th.bing.com/th/id/OIP.qV1Yrn2jtatMZ-cZw_YGqAHaE8?cb=iwp2&rs=1&pid=ImgDetMain",
+      "https://placehold.co/800x600/06d6a0/f0f0f0?text=Ogród&font=montserrat",
+      "https://placehold.co/800x600/06d6a0/e0e0e0?text=Taras&font=montserrat"
+    ]
+  },
+  {
+    "img": "https://d-gr.cdngr.pl/kadry/k/r/gr-ogl/44/91/29650965_798017497_nieruchomosc-przemyslowa-5886-m2-halamagazyn-tarczyn_xlarge.jpg",
+    "title": "Idealne mieszkanie na nowy start",
+    "location": "Wrocław, Stare Miasto",
+    "type": "Mieszkanie",
+    "area_sqm": 60,
+    "rooms": 2,
+    "yearBuilt": 2020,
+    "price": 980000,
+    "dateAdded": "2025-05-22",
+    "desc": "Nowoczesne, dwupokojowe mieszkanie w sercu Wrocławia. Doskonała lokalizacja, blisko komunikacji miejskiej i atrakcji. Idealne jako pierwsze mieszkanie lub inwestycja pod wynajem.",
+    "det": ["2 funkcjonalne sypialnie", "1 stylowa łazienka", "60 m² doskonale rozplanowane", "Przytulny balkon", "Winda w budynku"],
+    "badge": "Okazja",
+    "badge_color": "primary",
+    "galleryImages": [
+      "https://d-gr.cdngr.pl/kadry/k/r/gr-ogl/44/91/29650965_798017497_nieruchomosc-przemyslowa-5886-m2-halamagazyn-tarczyn_xlarge.jpg",
+      "https://placehold.co/800x600/8b5cf6/f0f0f0?text=Pokój+dzienny&font=montserrat",
+      "https://placehold.co/800x600/8b5cf6/e0e0e0?text=Łazienka&font=montserrat"
+    ]
+  },
+  {
+    "img": "https://placehold.co/600x400/eab308/white?text=Dom+Pod+Miastem&font=montserrat",
+    "title": "Urokliwy Dom pod Miastem",
+    "location": "Kraków, Zielonki",
+    "type": "Dom jednorodzinny",
+    "area_sqm": 120,
+    "rooms": 4,
+    "yearBuilt": 2015,
+    "price": 1250000,
+    "dateAdded": "2025-04-28",
+    "desc": "Cichy i spokojny dom z pięknym widokiem na okolicę, idealny dla osób ceniących prywatność i bliskość natury, a jednocześnie z dobrym dojazdem do centrum Krakowa.",
+    "det": ["4 sypialnie", "2 łazienki", "120 m²", "Działka 8 arów", "Garaż"],
+    "badge": "Polecane",
+    "badge_color": "accent",
+    "galleryImages": [
+      "https://placehold.co/800x600/eab308/f0f0f0?text=Dom+1&font=montserrat",
+      "https://placehold.co/800x600/eab308/e0e0e0?text=Dom+2&font=montserrat"
+    ]
+  },
+  {
+    "img": "https://placehold.co/600x400/14b8a6/white?text=Nowoczesny+Apartament&font=montserrat",
+    "title": "Nowoczesny Apartament w Centrum Warszawy",
+    "location": "Warszawa, Śródmieście",
+    "type": "Apartament",
+    "area_sqm": 75,
+    "rooms": 2,
+    "yearBuilt": 2023,
+    "price": 1950000,
+    "dateAdded": "2025-05-01",
+    "desc": "Elegancki apartament w nowoczesnym budynku, zlokalizowany w samym sercu Warszawy. Wysoki standard wykończenia, doskonała komunikacja. Świetna inwestycja.",
+    "det": ["2 sypialnie", "1 łazienka", "75 m²", "Balkon", "Miejsce parkingowe"],
+    "badge": "Top Oferta",
+    "badge_color": "primary",
+    "galleryImages": [
+      "https://placehold.co/800x600/14b8a6/f0f0f0?text=Apartament+1&font=montserrat",
+      "https://placehold.co/800x600/14b8a6/e0e0e0?text=Apartament+2&font=montserrat"
+    ]
+  }
+]

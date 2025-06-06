@@ -1,0 +1,84 @@
+/* assets/css/chatbot.css */
+
+#chatbotContainer {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#chatbotContainer[data-active="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+#chatbotContainer[data-active="false"] {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95); /* Lepszy efekt wysuwania z dołu */
+  pointer-events: none;
+}
+
+.chatbot-message {
+  padding: 0.625rem 0.875rem; /* 10px 14px */
+  border-radius: 0.75rem; /* 12px */
+  max-width: 85%;
+  word-wrap: break-word;
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chatbot-message.user {
+  background-color: #3b82f6; /* primary */
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 0.25rem; /* 4px */
+}
+
+.chatbot-message.bot {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #1f2937; /* gray-800 */
+  margin-right: auto;
+  border-bottom-left-radius: 0.25rem; /* 4px */
+}
+
+.dark .chatbot-message.bot {
+  background-color: #374151; /* dark:gray-700 */
+  color: #f3f4f6; /* dark:gray-100 */
+}
+
+.chatbot-message.loading-bot {
+  font-style: italic;
+  color: #6b7280; /* gray-500 */
+  background-color: transparent;
+  text-align: left;
+  padding: 0.5rem 0;
+  box-shadow: none;
+}
+
+.dark .chatbot-message.loading-bot {
+  color: #9ca3af; /* dark:gray-400 */
+}
+
+/* Scrollbar dla okna wiadomości chatbota */
+#chatbotMessages::-webkit-scrollbar {
+    width: 6px;
+}
+#chatbotMessages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+.dark #chatbotMessages::-webkit-scrollbar-track {
+    background: #2d3748; /* gray-800 w Tailwind */
+}
+#chatbotMessages::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 3px;
+}
+.dark #chatbotMessages::-webkit-scrollbar-thumb {
+    background: #4a5568; /* gray-600 w Tailwind */
+}
+#chatbotMessages::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3;
+}
+.dark #chatbotMessages::-webkit-scrollbar-thumb:hover {
+    background: #718096; /* gray-500 w Tailwind */
+}
